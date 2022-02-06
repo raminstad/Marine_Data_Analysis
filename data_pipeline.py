@@ -264,7 +264,9 @@ def uniq_cols(frame):
         
 
 
-# In[25]:
+# # BAROMETER
+
+# In[24]:
 
 
 """
@@ -278,6 +280,12 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column)) 
 
 
+# In[25]:
+
+
+barometer
+
+
 # In[26]:
 
 
@@ -285,7 +293,7 @@ for h in range(len(comp)):
     comp[h].dropna(axis=1,how='all',inplace=True)
 
 
-# In[31]:
+# In[27]:
 
 
 for df in range(len(comp)):
@@ -294,7 +302,7 @@ for df in range(len(comp)):
         comp[df].drop('BAROMETER(mm)',axis=1, inplace=True)
 
 
-# In[32]:
+# In[28]:
 
 
 b=['BAROMETER','BAROMETER(INCHES)']
@@ -309,7 +317,7 @@ for df in range(len(comp)):
         comp[df].drop('BAROMETER(INCHES)',axis=1, inplace=True)
 
 
-# In[33]:
+# In[29]:
 
 
 for df in range(len(comp)):
@@ -318,13 +326,13 @@ for df in range(len(comp)):
         comp[df].drop('BAROMETER (mm)',axis=1, inplace=True)
 
 
-# In[34]:
+# In[30]:
 
 
 comp[87].drop('BAROMETER (inches)',axis=1, inplace=True)
 
 
-# In[35]:
+# In[31]:
 
 
 column=uniq_cols(comp)
@@ -333,7 +341,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column)) 
 
 
-# In[36]:
+# In[32]:
 
 
 for df in range(len(comp)):
@@ -362,7 +370,7 @@ for df in range(len(comp)):
         
 
 
-# In[37]:
+# In[33]:
 
 
 column=uniq_cols(comp)
@@ -371,7 +379,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column)) 
 
 
-# In[38]:
+# In[34]:
 
 
 for df in range(len(comp)):
@@ -380,7 +388,7 @@ for df in range(len(comp)):
         comp[df].drop('BAROMETER (INCHES) 15h',axis=1, inplace=True)
 
 
-# In[39]:
+# In[35]:
 
 
 column=uniq_cols(comp)
@@ -389,7 +397,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column)) 
 
 
-# In[40]:
+# In[36]:
 
 
 for df in range(len(comp)):
@@ -399,7 +407,7 @@ for df in range(len(comp)):
         comp[df].drop(' BAROMETER 4 P.M.',axis=1, inplace=True)
 
 
-# In[41]:
+# In[37]:
 
 
 column=uniq_cols(comp)
@@ -408,7 +416,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column))
 
 
-# In[42]:
+# In[38]:
 
 
 for df in range(len(comp)):
@@ -424,7 +432,7 @@ for df in range(len(comp)):
             comp[df].drop('BAROMETER 16h',axis=1, inplace=True)
 
 
-# In[43]:
+# In[39]:
 
 
 column=uniq_cols(comp)
@@ -433,7 +441,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column))
 
 
-# In[45]:
+# In[40]:
 
 
 for df in range(len(comp)):
@@ -443,7 +451,7 @@ for df in range(len(comp)):
         
 
 
-# In[46]:
+# In[41]:
 
 
 column=uniq_cols(comp)
@@ -452,7 +460,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column))
 
 
-# In[47]:
+# In[42]:
 
 
 for df in range(len(comp)):
@@ -460,7 +468,7 @@ for df in range(len(comp)):
         comp[df].rename(columns={'BAROMETER AT:': 'BAROMETER'}, inplace=True)
 
 
-# In[48]:
+# In[43]:
 
 
 column=uniq_cols(comp)
@@ -469,7 +477,7 @@ r = re.compile("BAR*")
 barometer = list(filter(r.match, column))
 
 
-# In[49]:
+# In[44]:
 
 
 for df in range(len(comp)):
@@ -498,7 +506,7 @@ for df in range(len(comp)):
     
 
 
-# In[55]:
+# In[45]:
 
 
 column=uniq_cols(comp)
@@ -507,7 +515,7 @@ r = re.compile("ANEROID*")
 barometer = list(filter(r.match, column))
 
 
-# In[62]:
+# In[46]:
 
 
 for df in range(len(comp)):
@@ -520,7 +528,7 @@ for df in range(len(comp)):
             comp[df]['BAROMETER']=comp[df]['BAROMETER'].apply(lambda x: None if type(x)!=float else x)
 
 
-# In[65]:
+# In[47]:
 
 
 column=uniq_cols(comp)
@@ -529,7 +537,7 @@ r = re.compile("ANEROID*")
 barometer = list(filter(r.match, column))
 
 
-# In[68]:
+# In[48]:
 
 
 for df in range(len(comp)):
@@ -543,7 +551,7 @@ for df in range(len(comp)):
         comp[df]['BAROMETER']=comp[df]['BAROMETER'].apply(lambda x: x/25.4)
 
 
-# In[70]:
+# In[49]:
 
 
 column=uniq_cols(comp)
@@ -552,7 +560,7 @@ r = re.compile("ANEROID*")
 barometer = list(filter(r.match, column))
 
 
-# In[75]:
+# In[50]:
 
 
 for df in range(len(comp)):
@@ -561,7 +569,7 @@ for df in range(len(comp)):
         comp[df].drop('ANEROID BAROMETER II',axis=1, inplace=True)
 
 
-# In[76]:
+# In[51]:
 
 
 column=uniq_cols(comp)
@@ -570,7 +578,7 @@ r = re.compile("ANEROID*")
 barometer = list(filter(r.match, column))
 
 
-# In[80]:
+# In[52]:
 
 
 for df in range(len(comp)):
@@ -578,13 +586,752 @@ for df in range(len(comp)):
         comp[df].drop("SHIP'S BAROMETER",axis=1, inplace=True)
 
 
-# In[81]:
+# In[53]:
+
+
+for df in range(len(comp)):
+    if "MEAN BAROMETER" in comp[df].columns:
+        comp[df].drop("MEAN BAROMETER",axis=1, inplace=True)
+        
+
+
+# In[54]:
+
+
+for df in range(len(comp)):
+    if "THERMOMETER of Barometer" in comp[df].columns:
+        comp[df].drop("THERMOMETER of Barometer",axis=1, inplace=True)
+
+
+# In[55]:
+
+
+for df in range(len(comp)):
+    if "MERCURIAL BAROMETER" in comp[df].columns:
+        comp[df].rename(columns={'MERCURIAL BAROMETER': 'BAROMETER'}, inplace=True)
+
+
+# In[56]:
+
+
+for df in range(len(comp)):
+    if "SEMPIESOMETER" in comp[df].columns:
+        comp[df].rename(columns={'SEMPIESOMETER': 'BAROMETER'}, inplace=True)
+
+
+# In[57]:
+
+
+for df in range(len(comp)):
+    if "SYMPESIOMETER" in comp[df].columns:
+        comp[df].drop("SYMPESIOMETER",axis=1, inplace=True)
+        
+
+
+# In[58]:
+
+
+for df in range(len(comp)):
+    if "SYMPIESOMETER" in comp[df].columns:
+        if df==15:
+            comp[df].drop("SYMPIESOMETER",axis=1, inplace=True)
+        else:
+            comp[df].rename(columns={'SYMPIESOMETER': 'BAROMETER'}, inplace=True)
+
+
+# In[59]:
+
+
+for df in range(len(comp)):
+    if "SYMPIESOMETER PRESSURE" in comp[df].columns:
+        comp[df].drop("SYMPIESOMETER PRESSURE",axis=1, inplace=True)
+
+
+# In[60]:
+
+
+comp[35].rename(columns={'HOUR': 'BAROMETER'}, inplace=True)
+
+
+# In[61]:
+
+
+comp[14].rename(columns={'6 A.M.': 'BAROMETER'}, inplace=True)
+comp[14].drop('12 P.M.',axis=1, inplace=True)
+comp[14].drop('5 P.M.',axis=1, inplace=True)
+
+
+# In[62]:
 
 
 for df in range(len(comp)):
     if "BAROMETER"  not in comp[df].columns:
-        comp[df]["BAROMETER"]=None
+        comp[df]["BAROMETER"]=np.NaN
 
 
+# In[63]:
 
+
+# dropping any str formats in the barometer column
+for i in range (len(comp)):
+    comp[i]['BAROMETER']=comp[i]['BAROMETER'].apply(lambda x: np.NaN if type(x)==str else x)
+
+
+# In[64]:
+
+
+# checking every dataframe and if their barometers are in mm converting it to inches
+for i in range (len(comp)):
+    comp[i]['BAROMETER']=comp[i]['BAROMETER'].apply(lambda x: x/25.4 if np.mean(comp[i]['BAROMETER'].value_counts().index)>100 else x)
+
+
+# # LATITUDE AND LONGITUDE
+
+# In[65]:
+
+
+column=uniq_cols(comp)
+column.sort()
+
+
+# In[66]:
+
+
+long=[]
+lat=[]
+
+for df in range(len(comp)):
+    if "LATITUDE" in comp[df].columns or "LATITUDE DR" in comp[df].columns :
+        lat.append(df)
+        
+    if "LONGITUDE" in comp[df].columns or "LONGITUDE DR" in comp[df].columns :
+        long.append(df)
+
+
+# In[67]:
+
+
+np.mean(long)
+
+
+# In[68]:
+
+
+np.mean(lat)
+
+
+# In[69]:
+
+
+for i in lat:
+    if i not in long:
+        print(i)
+
+
+# In[70]:
+
+
+# since the latitude for comp[23] is all nan we should add longitude to this dataframe 
+#and set it to nan as well
+comp[23]['LONGITUDE']=np.NaN
+comp[23]['N/S']=np.NaN
+comp[23]['E/W']=np.NAN
+
+
+# In[71]:
+
+
+nolat=[]
+for df in range(len(comp)):
+    if "LATITUDE" not in comp[df].columns:
+        nolat.append(df)
+
+
+# In[72]:
+
+
+no_lat=[]
+for df in nolat:
+    no_lat.append(comp[df])
+
+
+# In[73]:
+
+
+for df in lat:
+    if 'LATITUDE' in comp[df]:
+        comp[df]['LATITUDE']=comp[df]['LATITUDE'].apply(lambda x: np.NaN if type(x)==str else x)
+        comp[df]['LONGITUDE']=comp[df]['LONGITUDE'].apply(lambda x: np.NaN if type(x)==str else x)
+    
+    else:
+        comp[df]['LATITUDE DR']=comp[df]['LATITUDE DR'].apply(lambda x: np.NaN if type(x)==str else x)
+        comp[df]['LONGITUDE DR']=comp[df]['LONGITUDE DR'].apply(lambda x: np.NaN if type(x)==str else x)
+
+
+# In[74]:
+
+
+for df in lat:
+    if 'LATITUDE' in comp[df]:
+        comp[df]['LATITUDE']=comp[df].apply(lambda x:-x['LATITUDE'] if x['N/S']=='S' else x['LATITUDE'],axis=1)
+        comp[df]['LONGITUDE']=comp[df].apply(lambda x:-x['LONGITUDE'] if x['E/W']=='W' else x['LONGITUDE'],axis=1)
+    else:
+        comp[df]['LATITUDE DR']=comp[df].apply(lambda x:-x['LATITUDE DR'] if x['N/S']=='S' else x['LATITUDE DR'],axis=1)
+        comp[df]['LONGITUDE DR']=comp[df].apply(lambda x:-x['LONGITUDE DR'] if x['E/W']=='W' else x['LONGITUDE DR'],axis=1)
+        
+
+
+# In[75]:
+
+
+for df in range (len (comp)):
+    if 'LATITUDES' in comp[df].columns:
+        comp[df].drop('LATITUDES',axis=1, inplace=True)
+
+
+# In[76]:
+
+
+comp[85].rename(columns={'LATITUDE DR': 'LATITUDE'}, inplace=True)
+comp[85].rename(columns={'LONGITUDE DR': 'LONGITUDE'}, inplace=True)
+
+
+# In[77]:
+
+
+for df in range(len(comp)):
+    if "LATITUDE"  not in comp[df].columns:
+        comp[df]["LATITUDE"]=np.NaN
+        comp[df]["LONGITUDE"]=np.NaN
+
+
+# # Temperature adjustment
+
+# In[78]:
+
+
+# figuered out comp[3] and comp[8] are the same so I remove one of them at the end of cleaning
+
+
+# In[79]:
+
+
+def temp_uniq(comp):
+    column=uniq_cols(comp)
+    
+    t = re.compile("THER*")
+    ther_list = set(filter(t.search,column))
+    ther_list
+
+    te = re.compile("TEMP*")
+    temp_list = set(filter(te.search,column))
+    temp_list
+    return set.union(temp_list,ther_list)
+
+
+# In[80]:
+
+
+for df in range (len(comp)):
+    if 'AIR TEMP' in comp[df]:
+        if df==2 or df==7:
+            comp[df].drop('WATER TEMP',axis=1, inplace=True) 
+            comp[df].rename(columns={'AIR TEMP': 'THERMOMETER'}, inplace=True)
+        
+        elif df==26:
+            comp[df].rename(columns={'AIR TEMP': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('SEA',axis=1, inplace=True) 
+    
+        elif df==59:
+            comp[df].drop('AIR TEMP',axis=1, inplace=True) 
+            
+        elif df==76:
+            comp[df].rename(columns={'ATT.THERM': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('AIR TEMP',axis=1, inplace=True)
+            comp[df].drop('SEA TEMP',axis=1, inplace=True)
+
+        
+        elif df==88:
+            comp[df].rename(columns={'THERM.': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('ATT.THERM',axis=1, inplace=True)
+            comp[df].drop('AIR TEMP',axis=1, inplace=True)
+            comp[df].drop('SEA TEMP',axis=1, inplace=True)
+
+
+# In[81]:
+
+
+for df in range (len(comp)):
+    if 'AIR TEMPERATURE' in comp[df]:
+        if df==38:
+            comp[df].rename(columns={'AIR TEMPERATURE': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('WATER TEMPERATURE',axis=1, inplace=True)
+            comp[df].drop('ATTACHED THERMOMETER',axis=1, inplace=True)
+            
+        elif df==67:
+            comp[df].rename(columns={'AIR TEMPERATURE': 'THERMOMETER'}, inplace=True)
+        
+        elif df==15:
+            comp[df].rename(columns={'AIR TEMPERATURE': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('SEA TEMP',axis=1, inplace=True)
+        
+        else:
+            comp[df].rename(columns={'AIR TEMPERATURE': 'THERMOMETER'}, inplace=True)
+            comp[df].drop('SEA TEMPERATURE',axis=1, inplace=True)
+
+
+# In[82]:
+
+
+for df in range (len(comp)):
+    if 'AIR TEMPERATURE AT:' in comp[df]:
+        comp[df].rename(columns={'AIR TEMPERATURE AT:': 'THERMOMETER'}, inplace=True)
+        comp[df].drop('SEA TEMPERATURE AT:',axis=1, inplace=True)
+
+
+# In[83]:
+
+
+for df in range (len(comp)):
+    if 'ATT THERM' in comp[df]:
+        comp[df].rename(columns={'ATT THERM': 'THERMOMETER'}, inplace=True)
+
+
+# In[84]:
+
+
+for df in range (len(comp)):
+    if 'ATT.THERM' in comp[df]:
+        comp[df].rename(columns={'ATT.THERM': 'THERMOMETER'}, inplace=True)
+        comp[df].drop('TEMP.CAP.',axis=1, inplace=True)
+        comp[df].drop('TEMP.SEA',axis=1, inplace=True)
+        comp[df].drop('TEMP.AIR',axis=1, inplace=True)
+        comp[df].drop('TEMP.WHEEL',axis=1, inplace=True)
+
+
+# In[85]:
+
+
+for df in range (len(comp)):
+    if 'DRY AND WET THERMOMETERS, ASPIRATED' in comp[df]:
+        comp[df].rename(columns={np.nan:'YEAR'},inplace=True)
+        comp[df].rename(columns={'DRY AND WET THERMOMETERS, ASPIRATED':'THERMOMETER'},inplace=True)
+        comp[df].drop('DRY AND WET THERMOMETERS, FREE',axis=1, inplace=True)
+
+
+# In[86]:
+
+
+for df in range (len(comp)):
+    if 'EXTERNAL THERMOMETERS' in comp[df]:
+        comp[df].rename(columns={'EXTERNAL THERMOMETERS':'THERMOMETER'},inplace=True)
+       
+
+
+# In[87]:
+
+
+for df in range (len(comp)):
+    if 'MEAN TEMPERATURE' in comp[df]:
+        comp[df].rename(columns={'MEAN TEMPERATURE':'THERMOMETER'},inplace=True)
+        comp[df].drop('TEMPERATURE 1',axis=1, inplace=True)
+        comp[df].drop('TEMPERATURE 2',axis=1, inplace=True)
+
+
+# In[88]:
+
+
+for df in range (len(comp)):
+    if 'SEA TEMP(F)' in comp[df]:
+        comp[df].rename(columns={'SEA TEMP(F)':'THERMOMETER'},inplace=True)
+
+
+# In[89]:
+
+
+for df in range (len(comp)):
+    if 'SEA TEMP.' in comp[df]:
+        comp[df].drop('THERMOMETER',axis=1, inplace=True)
+        comp[df].rename(columns={'SEA TEMP.':'THERMOMETER'},inplace=True)
+
+
+# In[90]:
+
+
+for df in range (len(comp)):
+    if 'SEA TEMPERATURE' in comp[df]:
+        comp[df].rename(columns={'SEA TEMPERATURE':'THERMOMETER'},inplace=True)
+
+
+# In[91]:
+
+
+for df in range (len(comp)):
+    if 'SYMPIESOMETER TEMPERATURE' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURE AIR':'THERMOMETER'},inplace=True)
+        comp[df].drop('TEMPERATURE SEA',axis=1, inplace=True)
+        comp[df].drop('SYMPIESOMETER TEMPERATURE',axis=1, inplace=True)
+
+
+# In[92]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURE (C)' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURE (C)':'THERMOMETER'},inplace=True)
+
+
+# In[93]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURE (F)' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURE ©':'THERMOMETER'},inplace=True)
+        comp[df].drop('TEMPERATURE (F)',axis=1, inplace=True)
+
+
+# In[94]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURE AIR' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURE AIR':'THERMOMETER'},inplace=True)
+        comp[df].drop('TEMPERATURE SEA',axis=1, inplace=True)
+           
+
+
+# In[95]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURE IN SHADE 8h' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURE IN SHADE 8h':'THERMOMETER'},inplace=True)
+        comp[df].drop('TEMPERATURE IN SHADE Sunset',axis=1, inplace=True)
+
+
+# In[96]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURE MAX' in comp[df]:
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['TEMPERATURE MAX']+x['TEMPERATURE MIN'])/2,axis=1)
+        comp[df].drop('TEMPERATURE MAX',axis=1, inplace=True)
+        comp[df].drop('TEMPERATURE MIN',axis=1, inplace=True)
+        comp[df].drop('TEMPERATURE SEA',axis=1, inplace=True)
+
+
+# In[97]:
+
+
+for df in range (len(comp)):
+    if 'TEMPERATURES' in comp[df]:
+        comp[df].rename(columns={'TEMPERATURES':'THERMOMETER'},inplace=True)
+
+
+# In[98]:
+
+
+for df in range (len(comp)):
+    if 'THERM' in comp[df]:
+        comp[df].rename(columns={'THERM':'THERMOMETER'},inplace=True)
+
+        
+
+
+# In[99]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER  (IN SHADE)' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER  (IN SHADE)':'THERMOMETER'},inplace=True)
+
+
+# In[100]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER ( C )' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER ( C )':'THERMOMETER'},inplace=True)
+
+
+# In[101]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (C)' in comp[df]:
+        comp[df].columns.values[12]='THERMOMETER'
+        comp[df].rename(columns={'THERMOMETER (C)':'WASTE'},inplace=True)        
+
+
+# In[102]:
+
+
+comp[5]=comp[5][['YEAR','MONTH','DAY','BAROMETER','THERMOMETER','LATITUDE','LONGITUDE']]
+
+
+# In[103]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (F)' in comp[df]:
+        if df==85:
+            comp[df].rename(columns={'THERMOMETER (F)':'THERMOMETER'},inplace=True)
+            comp[df].drop('THERMOMETER ON DECK IN SHADE',axis=1, inplace=True)
+            
+        else:
+            comp[df].rename(columns={'THERMOMETER (F)':'THERMOMETER'},inplace=True)
+
+
+# In[104]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (F) MAX 15h' in comp[df]:
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER (F) MAX 9h']+x['THERMOMETER (F) MAX 15h']+x['THERMOMETER (F) MIN 9h'])/3,axis=1)
+        comp[df].drop('THERMOMETER (F) MAX 15h',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER (F) MAX 9h',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER (F) MIN 9h',axis=1, inplace=True)
+
+
+# In[105]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (IN SHADE)' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER (IN SHADE)':'THERMOMETER'},inplace=True)
+
+
+# In[106]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (UNDER COVER) ATTACHED ' in comp[df]:
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER (UNDER COVER) ATTACHED ']+x['THERMOMETER (UNDER COVER) DETACHED'])/2,axis=1)
+        comp[df].drop('THERMOMETER (UNDER COVER) ATTACHED ',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER (UNDER COVER) DETACHED',axis=1, inplace=True)
+
+
+# In[107]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER (in shade)' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER (in shade)':'THERMOMETER'},inplace=True)
+
+
+# In[108]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER 10h' in comp[df]:
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER 10h']+x['THERMOMETER 22h'])/2,axis=1)
+        comp[df].drop('THERMOMETER 10h',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER 22h',axis=1, inplace=True)
+        
+
+
+# In[109]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER 2 P.M.' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER DECK':'THERMOMETER'},inplace=True)
+        comp[df].drop('THERMOMETER 6 A.M.',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER 2 P.M.',axis=1, inplace=True)
+        
+            
+
+
+# In[110]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER 3 P.M.' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER DECK':'THERMOMETER'},inplace=True)
+        comp[df].drop('THERMOMETER 9 A.M.',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER 3 P.M.',axis=1, inplace=True)
+
+
+# In[111]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER AIR' in comp[df]:
+        if df==24:
+            comp[df].rename(columns={'THERMOMETER AIR':'THERMOMETER'},inplace=True)
+            comp[df].drop('THERMOMETER ATTACHED',axis=1, inplace=True)
+            
+        else:
+            comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER ATTACHED']+x['THERMOMETER AIR']+x['THERMOMETER WET'])/3,axis=1)
+            comp[df].drop('THERMOMETER ATTACHED',axis=1, inplace=True)
+            comp[df].drop('THERMOMETER AIR',axis=1, inplace=True)
+            comp[df].drop('THERMOMETER WET',axis=1, inplace=True)
+
+            
+
+
+# In[112]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER IN STERN GALLEY IN SHADE' in comp[df]:
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER TIMEKEEPERS']+x['THERMOMETER IN STERN GALLEY IN SHADE'])/2,axis=1)
+        comp[df].drop('THERMOMETER TIMEKEEPERS',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER IN STERN GALLEY IN SHADE',axis=1, inplace=True)
+
+
+# In[113]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER MAX' in comp[df]:
+        comp[df]['THERMOMETER MAX']=comp[df]['THERMOMETER MAX'].apply(lambda x: np.NaN if type(x)==str else x)
+        comp[df]['THERMOMETER MIN']=comp[df]['THERMOMETER MIN'].apply(lambda x: np.NaN if type(x)==str else x)
+        comp[df]['THERMOMETER']=comp[df].apply(lambda x: (x['THERMOMETER MAX']+x['THERMOMETER MIN'])/2,axis=1)
+        comp[df].drop('THERMOMETER MAX',axis=1, inplace=True)
+        comp[df].drop('THERMOMETER MIN',axis=1, inplace=True)
+        
+        
+
+
+# In[114]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER( C)' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER( C)':'THERMOMETER'},inplace=True)
+        comp[df].drop('THERMOMETER(F)',axis=1, inplace=True)
+
+
+# In[115]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER(F)' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER(F)':'THERMOMETER'},inplace=True)
+
+
+# In[116]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER©' in comp[df]:
+        comp[df].rename(columns={'THERMOMETER©':'THERMOMETER'},inplace=True)
+
+
+# In[117]:
+
+
+for df in range (len(comp)):
+    if 'WEATHER' in comp[df]:
+        comp[df].rename(columns={'WEATHER':'THERMOMETER'},inplace=True)
+
+
+# In[118]:
+
+
+for df in range (len(comp)):
+    if 'THERMOMETER' not in comp[df]:
+        comp[df]['THERMOMETER']=np.NaN
+
+
+# In[119]:
+
+
+comp[17]=comp[17].loc[:,~comp[17].columns.duplicated()]
+
+
+# In[120]:
+
+
+comp[0]['THERMOMETER']=np.NaN
+
+
+# In[121]:
+
+
+for df in range (len(comp)):
+    comp[df]['THERMOMETER']=comp[df]['THERMOMETER'].apply(lambda x: np.NaN if type(x)==str else x)
+            
+
+
+# In[122]:
+
+
+for df in range (len(comp)):
+    comp[df]['THERMOMETER']=comp[df]['THERMOMETER'].apply(lambda x: (x-32)*(5/9) if np.mean(comp[df]['THERMOMETER'].value_counts().index)>35 else x)
+    
+
+
+# In[123]:
+
+
+for df in comp:
+    df.drop([0,1,2], axis=0, inplace=True)
+
+
+# In[124]:
+
+
+for df in comp:
+    df.reset_index(inplace=True)
+
+
+# # YEAR , MONTH,DAY
+
+# In[125]:
+
+
+for df in range (len(comp)):
+    if 'YEAR' not in comp[df]:
+        comp[df]['YEAR']=np.NaN
+
+
+# In[126]:
+
+
+for df in range (len(comp)):
+    if 'MONTH' not in comp[df]:
+        comp[df]['MONTH']=np.NaN
+
+
+# In[127]:
+
+
+for df in range (len(comp)):
+    if 'DAY' not in comp[df]:
+        comp[df]['DAY']=np.NaN
+
+
+# # MERGING
+
+# In[128]:
+
+
+for df in range (len(comp)):
+    comp[df]=comp[df][['YEAR','MONTH','DAY','BAROMETER','THERMOMETER','LATITUDE','LONGITUDE']]
+
+
+# In[129]:
+
+
+final_df=pd.concat(comp,axis=0)
+
+
+# In[130]:
+
+
+final_df.reset_index(inplace=True)
+
+
+# In[131]:
+
+
+final_df.drop(columns=['index'],inplace=True)
+
+
+# In[132]:
+
+
+final_df.to_csv('final_df.csv')
 
