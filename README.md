@@ -34,7 +34,18 @@
 [Final Dataframe](https://github.com/raminstad/Marine_Data_Analysis/blob/main/final_df.csv)
 
 # Exploratory Data Analysis
+
+[The notebook for EDA](https://github.com/raminstad/Marine_Data_Analysis/blob/main/EDA.ipynb)
 * The main focus of our analysis is to see how the Barometer and Thermometer have changed over the years from 1800-1900
-##Changes Of Mean And Standard Deviation For Thermometer And Barometer Over The Years
-![download (1)](https://user-images.githubusercontent.com/79353291/156081016-95e57f33-d413-4aa6-86e2-3ce03b521254.png)
+* Changes Of Mean And Standard Deviation For Thermometer And Barometer Over The Years
+* Seperating Latitude and Longitude into bins and see where did we have the most changes
+* Visualizing The data on Folium map 
+### Thermometer Map
  
+ <img width="2033" alt="temp" src="https://user-images.githubusercontent.com/79353291/156082022-2ebb27fc-91f4-4afc-8c73-8c3c87a7b2e2.png">
+ 
+ ### Barometer Map
+ 
+ <img width="2048" alt="pressure" src="https://user-images.githubusercontent.com/79353291/156082076-2e917f90-7b0d-4de5-9ec7-9e805a2ac0c2.png">
+
+
