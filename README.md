@@ -32,3 +32,9 @@
 * We then merged all of the dataframes into one final datframe and only kept the columns that were mentioned earlier
 
 [Final Dataframe](https://github.com/raminstad/Marine_Data_Analysis/blob/main/final_df.csv)
+
+# Exploratory Data Analysis
+* The main focus of our analysis is to see how the Barometer and Thermometer have changed over the years from 1800-1900
+##Changes Of Mean And Standard Deviation For Thermometer And Barometer Over The Years
+![download (1)](https://user-images.githubusercontent.com/79353291/156081016-95e57f33-d413-4aa6-86e2-3ce03b521254.png)
+ 
