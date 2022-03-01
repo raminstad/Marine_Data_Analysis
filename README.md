@@ -3,7 +3,7 @@
 
 # Group Members
 * Ramin Estadabadi
-* Yiuxuan Huang
+* Yixuan Huang
 * Zane Hallauer
 
 # Datasets that will be utilized
